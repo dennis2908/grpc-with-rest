@@ -1,13 +1,13 @@
 load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
 load("@bazel_gazelle//:def.bzl", "gazelle")
 
-# gazelle:prefix github.com/flakrimjusufi/grpc-with-rest
+# gazelle:prefix github.com/dennis2908/grpc-with-rest
 gazelle(name = "gazelle")
 
 go_library(
     name = "grpc-with-rest_lib",
     srcs = ["main.go"],
-    importpath = "github.com/flakrimjusufi/grpc-with-rest",
+    importpath = "github.com/dennis2908/grpc-with-rest",
     visibility = ["//visibility:private"],
     deps = [
         "//client:client_lib",

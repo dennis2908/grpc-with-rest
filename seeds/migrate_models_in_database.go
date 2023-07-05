@@ -4,8 +4,8 @@
 package main
 
 import (
-	"github.com/flakrimjusufi/grpc-with-rest/database"
-	"github.com/flakrimjusufi/grpc-with-rest/models"
+	"github.com/dennis2908/grpc-with-rest/database"
+	"github.com/dennis2908/grpc-with-rest/models"
 )
 
 func main() {

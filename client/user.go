@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/flakrimjusufi/grpc-with-rest/models"
-	userpb "github.com/flakrimjusufi/grpc-with-rest/proto"
+	"github.com/dennis2908/grpc-with-rest/models"
+	userpb "github.com/dennis2908/grpc-with-rest/proto"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )

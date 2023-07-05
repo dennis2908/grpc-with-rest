@@ -1,4 +1,4 @@
-module github.com/flakrimjusufi/grpc-with-rest
+module github.com/dennis2908/grpc-with-rest
 
 go 1.18
 

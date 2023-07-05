@@ -5,7 +5,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/flakrimjusufi/grpc-with-rest/models"
+	"github.com/dennis2908/grpc-with-rest/models"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/postgres" // imports postgres dialect
 	"github.com/joho/godotenv"

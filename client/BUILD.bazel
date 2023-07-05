@@ -7,7 +7,7 @@ go_library(
         "user.go",
         "customer.go",
     ],
-    importpath = "github.com/flakrimjusufi/grpc-with-rest/client",
+    importpath = "github.com/dennis2908/grpc-with-rest/client",
     visibility = ["//visibility:private"],
     deps = [
         "//database",

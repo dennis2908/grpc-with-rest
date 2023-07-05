@@ -15,7 +15,7 @@ proto_library(
 go_library(
     name = "proto",
     srcs = ["user.pb.gw.go"],
-    importpath = "github.com/flakrimjusufi/grpc-with-rest/proto",
+    importpath = "github.com/dennis2908/grpc-with-rest/proto",
     visibility = ["//visibility:public"],
     deps = [
         "@com_github_grpc_ecosystem_grpc_gateway_v2//runtime",

@@ -13,7 +13,7 @@ The server and client side is all defined in _/proto/user.proto._
 
 Basically, what this app does is described in the picture below:
 
-![](https://github.com/flakrimjusufi/grpc-with-rest/blob/develop/images/architecture_introduction_diagram.jpg)
+![](https://github.com/dennis2908/grpc-with-rest/blob/develop/images/architecture_introduction_diagram.jpg)
 
 ## How to Run it?
 
@@ -22,7 +22,7 @@ Basically, what this app does is described in the picture below:
 **Clone the repo in your local environment:**
 
 ~~~~
-git clone https://github.com/flakrimjusufi/grpc-with-rest.git
+git clone https://github.com/dennis2908/grpc-with-rest.git
 ~~~~
 
 *Remove ".example" from both .env.example and /seeds/init.sql.example and populate them with your environment variables.*
@@ -99,7 +99,7 @@ For installation instructions, please refer to this link: https://www.postgresql
 **1. Clone the repo in your local environment:**
 
 ~~~~
-git clone https://github.com/flakrimjusufi/grpc-with-rest.git
+git clone https://github.com/dennis2908/grpc-with-rest.git
 ~~~~
 
 **2. Populate environment variables in .env file:**
@@ -161,17 +161,17 @@ You should have a response from server:
 There are three data models which we are using in this app:
 
 - users (which can be found
-  under[ /models/data_struct.go](https://github.com/flakrimjusufi/grpc-with-rest/blob/develop/models/data_struct.go))
+  under[ /models/data_struct.go](https://github.com/dennis2908/grpc-with-rest/blob/develop/models/data_struct.go))
 - credit_cards (which can also be found
-  under [ /models/data_struct.go](https://github.com/flakrimjusufi/grpc-with-rest/blob/develop/models/data_struct.go))
+  under [ /models/data_struct.go](https://github.com/dennis2908/grpc-with-rest/blob/develop/models/data_struct.go))
 - credit_card_application (which is also located
-  under [/models/data_struct.go ](https://github.com/flakrimjusufi/grpc-with-rest/blob/develop/models/data_struct.go))
+  under [/models/data_struct.go ](https://github.com/dennis2908/grpc-with-rest/blob/develop/models/data_struct.go))
 
 ### There are three seed scripts for populating the database:
 
-- [create_fake_users.go](https://github.com/flakrimjusufi/grpc-with-rest/blob/develop/seeds/create_fake_users.go)
-- [create_fake_credit_cards.go](https://github.com/flakrimjusufi/grpc-with-rest/blob/develop/seeds/create_fake_credit_cards.go)
-- [create_fake_cc_applications.go](https://github.com/flakrimjusufi/grpc-with-rest/blob/develop/seeds/create_fake_cc_applications.go)
+- [create_fake_users.go](https://github.com/dennis2908/grpc-with-rest/blob/develop/seeds/create_fake_users.go)
+- [create_fake_credit_cards.go](https://github.com/dennis2908/grpc-with-rest/blob/develop/seeds/create_fake_credit_cards.go)
+- [create_fake_cc_applications.go](https://github.com/dennis2908/grpc-with-rest/blob/develop/seeds/create_fake_cc_applications.go)
 
 #### To execute the script which populates the database with fake users, run this command:
 
@@ -239,11 +239,11 @@ Note that in order to interact with the server, you should also start up the gRP
 
 ### Multi-Step form:
 
-![](https://github.com/flakrimjusufi/grpc-with-rest/blob/develop/images/multi-step-form.png)
+![](https://github.com/dennis2908/grpc-with-rest/blob/develop/images/multi-step-form.png)
 
 **[Watch a Demo Video](https://youtu.be/gIiTUbvQRzw)**
 
-[![DEMO](https://github.com/flakrimjusufi/grpc-with-rest/blob/develop/images/demo-screen-shoot.png)](https://youtu.be/gIiTUbvQRzw)
+[![DEMO](https://github.com/dennis2908/grpc-with-rest/blob/develop/images/demo-screen-shoot.png)](https://youtu.be/gIiTUbvQRzw)
 
 
 ### Acknowledgments

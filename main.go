@@ -8,9 +8,9 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/flakrimjusufi/grpc-with-rest/client"
-	"github.com/flakrimjusufi/grpc-with-rest/helper"
-	userpb "app/grpc-with-rest/proto"
+	"github.com/dennis2908/grpc-with-rest/client"
+	"github.com/dennis2908/grpc-with-rest/helper"
+	userpb "github.com/dennis2908/grpc-with-rest/proto"
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
 	"github.com/joho/godotenv"
 	"google.golang.org/grpc"

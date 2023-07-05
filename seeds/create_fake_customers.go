@@ -5,8 +5,8 @@ package main
 
 import (
 	"github.com/brianvoe/gofakeit/v6"
-	"github.com/flakrimjusufi/grpc-with-rest/database"
-	"github.com/flakrimjusufi/grpc-with-rest/models"
+	"github.com/dennis2908/grpc-with-rest/database"
+	"github.com/dennis2908/grpc-with-rest/models"
 	"log"
 )
 

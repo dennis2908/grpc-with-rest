@@ -4,9 +4,9 @@ import (
 	"context"
 	"log"
 
-	db "github.com/flakrimjusufi/grpc-with-rest/database"
-	"github.com/flakrimjusufi/grpc-with-rest/models"
-	creditpb "github.com/flakrimjusufi/grpc-with-rest/proto"
+	db "github.com/dennis2908/grpc-with-rest/database"
+	"github.com/dennis2908/grpc-with-rest/models"
+	creditpb "github.com/dennis2908/grpc-with-rest/proto"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 	"google.golang.org/protobuf/types/known/timestamppb"
