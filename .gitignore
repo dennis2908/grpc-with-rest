@@ -1,0 +1,49 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# file: ~/.gitignore_global
+.DS_Store
+.idea
+
+# Dependency directories (remove the comment below to include it)
+# vendor/
+
+#env files
+*.env
+
+# dependencies
+/ui/node_modules
+/ui/.pnp
+/ui/.pnp.js
+
+# testing
+/ui/coverage
+
+# production
+/ui/build
+
+# misc
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+#sql
+/seeds/init.sql
+
+# Bazel files and directories
+bazel*

@@ -1,0 +1,156 @@
+syntax = "proto3";
+
+package user;
+
+option go_package = "/proto";
+
+import "google/api/annotations.proto";
+import "google/protobuf/timestamp.proto";
+
+service UserService {
+  rpc CreateUser (User) returns (User) {
+    option (google.api.http) = {
+      post: "/api/v1/user"
+      body: "*"
+    };
+  }
+  rpc UpdateUserByName (User) returns (User) {
+    option (google.api.http) = {
+      put: "/api/v1/user/name/{name}"
+      body: "*"
+    };
+  }
+  rpc UpdateUserByID (User) returns (User) {
+    option (google.api.http) = {
+      put: "/api/v1/user/id/{id}"
+      body: "*"
+    };
+  }
+  rpc DeleteUser (User) returns (Message) {
+    option (google.api.http) = {
+      delete: "/api/v1/user/name/{name}"
+    };
+  }
+  rpc ListUsers (User) returns (ListUser) {
+    option (google.api.http) = {
+      get: "/api/v1/user"
+    };
+  }
+  rpc GetUserByName (User) returns (User) {
+    option (google.api.http) = {
+      get: "/api/v1/user/name/{name}"
+    };
+  }
+  rpc GetUserByID (User) returns (User) {
+    option (google.api.http) = {
+      get: "/api/v1/user/id/{id}"
+    };
+  }
+  rpc SayHello (User) returns (Message) {
+    option (google.api.http) = {
+      post: "/api/v1/example/echo"
+      body: "*"
+    };
+  }
+}
+
+service CreditCardService{
+  rpc CreditCards (CreditCard) returns (ListCreditCards) {
+    option (google.api.http) = {
+      get: "/api/v1/card"
+    };
+  }
+  rpc GetCreditCardByUserName (CreditCard) returns (CreditCard) {
+    option (google.api.http) = {
+      get: "/api/v1/card/name/{name}"
+    };
+  }
+  rpc CreateCreditCardApplication (CreditCardApplication) returns (CreditCardApplication) {
+    option (google.api.http) = {
+      post: "/api/v1/card"
+      body: "*"
+    };
+  }
+  rpc GetCreditCardApplicationByName (CreditCardApplication) returns (CreditCardApplication) {
+    option (google.api.http) = {
+      get: "/api/v1/card/application/{firstName}"
+    };
+  }
+}
+
+message User {
+  uint32 id = 1;
+  string name = 2;
+  string email = 3;
+  string phoneNumber = 4;
+}
+
+message Message {
+  string message = 1;
+}
+
+message Payload {
+  message Attributes {
+    map<string, string> values = 1;
+  }
+  repeated Attributes attributes = 1;
+}
+
+message Result {
+  map<string, string> result = 1;
+}
+
+message AnyPayload {
+  string body = 1;
+}
+
+message ListUser {
+  repeated User users = 1;
+}
+
+message CreditCard {
+  uint32 id = 1;
+  string name = 2;
+  string email = 3;
+  string phoneNumber = 4;
+  string address = 5;
+  string country = 6;
+  string city = 7;
+  string zip = 8;
+  string cvv = 9;
+  google.protobuf.Timestamp created_at = 10;
+  google.protobuf.Timestamp updated_at = 11;
+  google.protobuf.Timestamp deleted_at = 12;
+}
+
+message CreditCardApplication {
+  uint32 id = 1;
+  string firstName = 2;
+  string lastName = 3;
+  google.protobuf.Timestamp dateOfBirth = 4;
+  string phoneNumber = 5;
+  string socialSecurityNumber = 6;
+  string employmentType = 7;
+  string occupation = 8;
+  float monthlyIncome = 9;
+  int32 yearsEmployed = 10;
+  string streetAddress = 11;
+  int32 yearsAtAddress = 12;
+  string city = 13;
+  string state = 14;
+  string zip = 15;
+  string country = 16;
+  string ownership = 17;
+  float monthlyPayment = 18;
+  string cardName = 19;
+  string cardType = 20;
+  string branch = 21;
+  string cardBranding = 22;
+  google.protobuf.Timestamp created_at = 23;
+  google.protobuf.Timestamp updated_at = 24;
+  google.protobuf.Timestamp deleted_at = 25;
+}
+
+message ListCreditCards {
+  repeated CreditCard credit_cards = 1;
+}

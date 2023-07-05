@@ -1,0 +1,156 @@
+syntax = "proto3";
+
+package customer;
+
+option go_package = "/proto";
+
+import "google/api/annotations.proto";
+import "google/protobuf/timestamp.proto";
+
+service CustomerService {
+  rpc CreateCustomer (Customer) returns (Customer) {
+    option (google.api.http) = {
+      post: "/api/v1/customer"
+      body: "*"
+    };
+  }
+  rpc UpdateCustomerByName (Customer) returns (Customer) {
+    option (google.api.http) = {
+      put: "/api/v1/customer/name/{name}"
+      body: "*"
+    };
+  }
+  rpc UpdateCustomerByID (Customer) returns (Customer) {
+    option (google.api.http) = {
+      put: "/api/v1/customer/id/{id}"
+      body: "*"
+    };
+  }
+  rpc DeleteCustomer (Customer) returns (Message) {
+    option (google.api.http) = {
+      delete: "/api/v1/customer/name/{name}"
+    };
+  }
+  rpc ListCustomers (Customer) returns (ListCustomer) {
+    option (google.api.http) = {
+      get: "/api/v1/customer"
+    };
+  }
+  rpc GetCustomerByName (Customer) returns (Customer) {
+    option (google.api.http) = {
+      get: "/api/v1/customer/name/{name}"
+    };
+  }
+  rpc GetCustomerByID (Customer) returns (Customer) {
+    option (google.api.http) = {
+      get: "/api/v1/customer/id/{id}"
+    };
+  }
+  rpc SayHello (Customer) returns (Message) {
+    option (google.api.http) = {
+      post: "/api/v1/example/echo"
+      body: "*"
+    };
+  }
+}
+
+service CreditCardCustomerService{
+  rpc CreditCardCustomers (CreditCardCustomer) returns (ListCreditCardCustomers) {
+    option (google.api.http) = {
+      get: "/api/v1/card"
+    };
+  }
+  rpc GetCreditCardCustomerByCustomerName (CreditCardCustomer) returns (CreditCardCustomer) {
+    option (google.api.http) = {
+      get: "/api/v1/card/name/{name}"
+    };
+  }
+  rpc CreateCreditCardCustomerApplication (CreditCardCustomerApplication) returns (CreditCardCustomerApplication) {
+    option (google.api.http) = {
+      post: "/api/v1/card"
+      body: "*"
+    };
+  }
+  rpc GetCreditCardCustomerApplicationByName (CreditCardCustomerApplication) returns (CreditCardCustomerApplication) {
+    option (google.api.http) = {
+      get: "/api/v1/card/application/{firstName}"
+    };
+  }
+}
+
+message Customer {
+  uint32 id = 1;
+  string name = 2;
+  string email = 3;
+  string phoneNumber = 4;
+}
+
+message Message {
+  string message = 1;
+}
+
+message Payload {
+  message Attributes {
+    map<string, string> values = 1;
+  }
+  repeated Attributes attributes = 1;
+}
+
+message Result {
+  map<string, string> result = 1;
+}
+
+message AnyPayload {
+  string body = 1;
+}
+
+message ListCustomer {
+  repeated Customer customers = 1;
+}
+
+message CreditCardCustomer {
+  uint32 id = 1;
+  string name = 2;
+  string email = 3;
+  string phoneNumber = 4;
+  string address = 5;
+  string country = 6;
+  string city = 7;
+  string zip = 8;
+  string cvv = 9;
+  google.protobuf.Timestamp created_at = 10;
+  google.protobuf.Timestamp updated_at = 11;
+  google.protobuf.Timestamp deleted_at = 12;
+}
+
+message CreditCardCustomerApplication {
+  uint32 id = 1;
+  string firstName = 2;
+  string lastName = 3;
+  google.protobuf.Timestamp dateOfBirth = 4;
+  string phoneNumber = 5;
+  string socialSecurityNumber = 6;
+  string employmentType = 7;
+  string occupation = 8;
+  float monthlyIncome = 9;
+  int32 yearsEmployed = 10;
+  string streetAddress = 11;
+  int32 yearsAtAddress = 12;
+  string city = 13;
+  string state = 14;
+  string zip = 15;
+  string country = 16;
+  string ownership = 17;
+  float monthlyPayment = 18;
+  string cardName = 19;
+  string cardType = 20;
+  string branch = 21;
+  string cardBranding = 22;
+  google.protobuf.Timestamp created_at = 23;
+  google.protobuf.Timestamp updated_at = 24;
+  google.protobuf.Timestamp deleted_at = 25;
+}
+
+message ListCreditCardCustomers {
+  repeated CreditCardCustomer credit_cards = 1;
+}
